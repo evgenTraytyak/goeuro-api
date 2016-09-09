@@ -26,20 +26,23 @@ var GoEuroAPI = function () {
   }
 
   /**
-  * @public
-  * @param {Object} params - params for the search
-  * @param {PositionObject} params.arrivalPosition
-  * @param {'EUR'|'USD'|'GBP'|'CHF'|'PLN'|'CZK'|'SEK'|'CNY'|'RUB'} params.currency
-  * @param {PositionObject} params.departurePosition
-  * @param {'com'|'de'|,|'it'|'cz'|'nl'|'fr'|'se'} params.domain
-  * @param {Date|null} params.inboundDate - date in YYYY-MM-DDT00:00:00.000 format
-  * @param {'en'} params.locale
-  * @param {Date|null} params.outboundDate - date in YYYY-MM-DDT00:00:00.000 format
-  * @param {{age: number, rebates: Array}[]} params.passengers
-  * @param {{splitRoundTrip: Boolean}} params.resultFormat
-  * @param {'directtrain'|'directbus'|'multimode'[]} params.searchModes
-  * @return {Promise} - a promise that returns result of the search with queryId and parts
-  */
+   * @public
+   * @param {Object} params - params for the search
+   * @param {PositionObject} params.arrivalPosition
+   * @param {('EUR'|'USD'|'GBP'|'CHF'|'PLN'|'CZK'|'SEK'|'CNY'|'RUB')} params.currency
+   * @param {PositionObject} params.departurePosition
+   * @param {('com'|'de'|'it'|'cz'|'nl'|'fr'|'se')} params.domain
+   * @param {Date|null} params.inboundDate - date in YYYY-MM-DDT00:00:00.000 format
+   * @param {'en'} params.locale
+   * @param {Date|null} params.outboundDate - date in YYYY-MM-DDT00:00:00.000 format
+   * @param {Object[]} params.passengers
+   * @param {number} params.passengers[].age
+   * @param {Array} params.passenger[].rebates
+   * @param {Object} params.resultFormat
+   * @param {Boolean} params.resultFormat.splitRoundTrip
+   * @param {('directtrain'|'directbus'|'multimode')} params.searchModes
+   * @return {Promise} - a promise that returns result of the search with queryId and parts
+   */
 
 
   _createClass(GoEuroAPI, [{
