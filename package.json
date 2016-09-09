@@ -21,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/evgenTraytyak/goeuro-api/issues"
   },
-  "homepage": "https://github.com/evgenTraytyak/goeuro-api#readme"
+  "homepage": "https://github.com/evgenTraytyak/goeuro-api#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
+  },
+  "dependencies": {
+    "unirest": "^0.5.1"
+  }
 }
