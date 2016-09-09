@@ -6,16 +6,20 @@ GoEuro API
 ## Installation
 
 ```javascript
-    npm install goeuro-api --save
+npm install goeuro-api --save
 ```
 
 ## How to use
 
 ```javascript
-const GoEuroClient = require('goeuro-api');
-```
+import GoEuroAPI from 'goeuro-api';
+const GoEuroClient = new GoEuroAPI();
 
-```javascript
-// ES2015
-import GoEuroClient from 'goeuro-api';
+GoEuroClient.search(params)
+  .then((response) => {
+    console.log(response.queryId);
+    console.log(response.parts);
+  })
+  .catch((error) => console.log(error));
+
 ```
