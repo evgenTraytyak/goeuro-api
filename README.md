@@ -15,11 +15,23 @@ npm install goeuro-api --save
 import GoEuroAPI from 'goeuro-api';
 const GoEuroClient = new GoEuroAPI();
 
+// Init the search and get flights, trains and buses.
 GoEuroClient.search(params)
   .then((response) => {
-    console.log(response.queryId);
-    console.log(response.parts);
+    GoEuroClient.flights()
+      .then(flights => console.log(flights));
+
+    GoEuroClient.trains()
+      .then(trains => console.log(trains));
+
+    GoEuroClient.buses()
+      .then(buses => console.log(buses));
   })
   .catch((error) => console.log(error));
 
+// Get buses by search_id
+GoEuroClient
+  .buses({ search_id: id })
+  .then(buses => console.log(buses))
+  .catch(error => console.log(error));
 ```
