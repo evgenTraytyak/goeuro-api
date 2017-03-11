@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/npm/v/goeuro-api.svg)](https://www.npmjs.com/package/goeuro-api)
+[![npm](https://img.shields.io/npm/dt/goeuro-api.svg)](https://www.npmjs.com/package/goeuro-api)
+
 GoEuro API
 ==========
 
